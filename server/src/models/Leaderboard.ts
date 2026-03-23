@@ -59,6 +59,5 @@ const leaderboardSchema = new Schema<ILeaderboard>(
   { timestamps: true }
 );
 
-leaderboardSchema.index({ contestId: 1 });
 
 export const Leaderboard = mongoose.model<ILeaderboard>('Leaderboard', leaderboardSchema);

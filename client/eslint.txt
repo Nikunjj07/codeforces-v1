@@ -1,0 +1,139 @@
+
+D:\web d\projects\codeforces\client\src\context\AuthContext.tsx
+  42:19  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+D:\web d\projects\codeforces\client\src\context\AuthContext.tsx:42:19
+  40 |   useEffect(() => {
+  41 |     const token = localStorage.getItem('accessToken')
+> 42 |     if (!token) { setIsLoading(false); return }
+     |                   ^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  43 |
+  44 |     api.get('/auth/me')
+  45 |       .then(({ data }) => setUser(data.data.user))  react-hooks/set-state-in-effect
+  69:14  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    react-refresh/only-export-components
+
+D:\web d\projects\codeforces\client\src\hooks\useWebSocket.ts
+  26:75  error  Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      @typescript-eslint/no-explicit-any
+  45:20  error  Error: Cannot access refs during render
+
+React refs are values that are not needed for rendering. Refs should only be accessed outside of render, such as in event handlers or effects. Accessing a ref value (the `current` property) during render can cause your component not to update as expected (https://react.dev/reference/react/useRef).
+
+D:\web d\projects\codeforces\client\src\hooks\useWebSocket.ts:45:20
+  43 |   }, [contestId, qc])
+  44 |
+> 45 |   return { socket: socketRef.current }
+     |                    ^^^^^^^^^^^^^^^^^ Cannot access ref value during render
+  46 | }
+  47 |  react-hooks/refs
+  45:20  error  Error: Cannot access refs during render
+
+React refs are values that are not needed for rendering. Refs should only be accessed outside of render, such as in event handlers or effects. Accessing a ref value (the `current` property) during render can cause your component not to update as expected (https://react.dev/reference/react/useRef).
+
+D:\web d\projects\codeforces\client\src\hooks\useWebSocket.ts:45:20
+  43 |   }, [contestId, qc])
+  44 |
+> 45 |   return { socket: socketRef.current }
+     |                    ^^^^^^^^^^^^^^^^^ Cannot access ref value during render
+  46 | }
+  47 |  react-hooks/refs
+
+D:\web d\projects\codeforces\client\src\pages\admin\ContestForm.tsx
+   33:27  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  122:33  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+D:\web d\projects\codeforces\client\src\pages\admin\ManageContests.tsx
+   8:16  error  'setPage' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  20:19  error  Unexpected any. Specify a different type      @typescript-eslint/no-explicit-any
+  51:33  error  Unexpected any. Specify a different type      @typescript-eslint/no-explicit-any
+
+D:\web d\projects\codeforces\client\src\pages\admin\ManageUsers.tsx
+  24:16  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  56:32  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+D:\web d\projects\codeforces\client\src\pages\admin\ProblemBank.tsx
+   17:19  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   17:36  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  102:33  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+D:\web d\projects\codeforces\client\src\pages\admin\SubmissionsReview.tsx
+   3:10  error  'Link' is defined but never used          @typescript-eslint/no-unused-vars
+  20:22  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  40:38  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+D:\web d\projects\codeforces\client\src\pages\auth\ForgotPassword.tsx
+  13:67  error  Empty block statement  no-empty
+
+D:\web d\projects\codeforces\client\src\pages\auth\Login.tsx
+  20:19  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+D:\web d\projects\codeforces\client\src\pages\auth\Register.tsx
+  25:19  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+D:\web d\projects\codeforces\client\src\pages\auth\ResetPassword.tsx
+  20:19  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+D:\web d\projects\codeforces\client\src\pages\public\ContestDetail.tsx
+   67:14  error  Error: Cannot call impure function during render
+
+`Date.now` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+D:\web d\projects\codeforces\client\src\pages\public\ContestDetail.tsx:67:14
+  65 |  const isParticipant = user && c.participants?.includes(user._id)
+  66 |  const isAdmin = user && ['ADMIN', 'TEACHER'].includes(user.role)
+> 67 |  const now = Date.now()
+     |              ^^^^^^^^^^ Cannot call impure function
+  68 |  const isLive = c.status === 'LIVE' && now >= new Date(c.startTime).getTime() && now <= new Date(c.endTime).getTime()
+  69 |  const countdownTarget = isLive ? c.endTime : c.startTime
+  70 |  react-hooks/purity
+  102:32  error  Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      @typescript-eslint/no-explicit-any
+  151:20  error  Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      @typescript-eslint/no-explicit-any
+  183:35  error  Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      @typescript-eslint/no-explicit-any
+
+D:\web d\projects\codeforces\client\src\pages\public\Contests.tsx
+   21:34  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+   73:18  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  137:20  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+D:\web d\projects\codeforces\client\src\pages\public\Home.tsx
+  227:51  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+D:\web d\projects\codeforces\client\src\pages\public\Leaderboard.tsx
+  12:18  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  69:20  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+D:\web d\projects\codeforces\client\src\pages\user\Dashboard.tsx
+  35:14  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  84:29  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+D:\web d\projects\codeforces\client\src\pages\user\ProblemSolve.tsx
+   44:20  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+D:\web d\projects\codeforces\client\src\pages\user\ProblemSolve.tsx:44:20
+  42 |  const pollRef = useRef<ReturnType<typeof setInterval> | null>(null)
+  43 |
+> 44 |  useEffect(() => { setCode(STARTER_CODE[lang] || '') }, [lang])
+     |                    ^^^^^^^ Avoid calling setState() directly within an effect
+  45 |
+  46 |  const { data: problem, isLoading } = useQuery({
+  47 |  queryKey: ['problem', problemId],  react-hooks/set-state-in-effect
+   49:32  error  Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              @typescript-eslint/no-explicit-any
+  123:37  error  Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              @typescript-eslint/no-explicit-any
+
+D:\web d\projects\codeforces\client\src\services\api.ts
+  18:68  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  20:30  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+✖ 39 problems (39 errors, 0 warnings)
+

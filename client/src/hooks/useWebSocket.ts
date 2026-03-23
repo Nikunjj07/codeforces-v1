@@ -41,6 +41,4 @@ export function useWebSocket(contestId?: string) {
       socketRef.current = null
     }
   }, [contestId, qc])
-
-  return { socket: socketRef.current }
 }

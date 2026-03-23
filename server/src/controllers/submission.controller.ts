@@ -32,7 +32,7 @@ export const submitSolution = asyncWrapper(async (req: AuthRequest, res: Respons
   const isParticipant = contest.participants.map(String).includes(userId);
   if (!isParticipant) throw ApiError.forbidden('You are not registered for this contest');
 
-  const submission = await Submission.create({
+  const submission = new Submission({
     userId,
     contestId,
     problemId,
@@ -40,6 +40,7 @@ export const submitSolution = asyncWrapper(async (req: AuthRequest, res: Respons
     code,
     status: 'PENDING',
   });
+  await submission.save();
 
   // Fire-and-forget: run judge in background
   judgeSubmission(submission._id.toString(), problem, language, code).catch(console.error);
