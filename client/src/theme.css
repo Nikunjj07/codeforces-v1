@@ -1,0 +1,97 @@
+/* ============================================================
+   CodeArena — tweakcn Theme (Dark Mode Default)
+   Compatible with: Tailwind v4
+   ============================================================ */
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+
+    /* ── Base Colors (Dark Theme) ────────────────────────── */
+    --background:        210 33% 6%;
+    --foreground:        210 20% 98%;
+
+    --card:              220 26% 9%;
+    --card-foreground:   210 20% 98%;
+
+    --popover:           220 26% 9%;
+    --popover-foreground:210 20% 98%;
+
+    /* ── Primary — Electric Cyan ─────────────────────────── */
+    --primary:           189 94% 43%;
+    --primary-foreground:210 33% 6%;
+
+    /* ── Secondary — Violet ──────────────────────────────── */
+    --secondary:         262 83% 63%;
+    --secondary-foreground: 210 20% 98%;
+
+    /* ── Muted ───────────────────────────────────────────── */
+    --muted:             217 19% 17%;
+    --muted-foreground:  215 14% 44%;
+
+    /* ── Accent ──────────────────────────────────────────── */
+    --accent:            189 94% 43%;
+    --accent-foreground: 210 33% 6%;
+
+    /* ── Destructive ─────────────────────────────────────── */
+    --destructive:       0 84% 60%;
+    --destructive-foreground: 210 20% 98%;
+
+    /* ── Border & Input ──────────────────────────────────── */
+    --border:            217 19% 17%;
+    --input:             217 19% 17%;
+    --ring:              189 94% 43%;
+
+    /* ── Semantic Status Colors ──────────────────────────── */
+    --status-accepted:   158 64% 52%;
+    --status-wrong:      0 84% 60%;
+    --status-tle:        38 92% 50%;
+    --status-pending:    215 14% 44%;
+    --status-ce:         271 81% 60%;
+    --status-re:         25 95% 53%;
+
+    /* ── Difficulty Colors ───────────────────────────────── */
+    --diff-beginner:     158 64% 52%;
+    --diff-intermediate: 38 92% 50%;
+    --diff-advanced:     0 84% 60%;
+    --diff-expert:       271 81% 60%;
+
+    /* ── Rank Colors (Leaderboard) ───────────────────────── */
+    --rank-gold:         43 96% 56%;
+    --rank-silver:       215 14% 71%;
+    --rank-bronze:       25 75% 53%;
+
+    /* ── Chart Colors ────────────────────────────────────── */
+    --chart-1:           189 94% 43%;
+    --chart-2:           262 83% 63%;
+    --chart-3:           158 64% 52%;
+    --chart-4:           38 92% 50%;
+    --chart-5:           0 84% 60%;
+
+    /* ── Sidebar ─────────────────────────────────────────── */
+    --sidebar-background:    220 30% 7%;
+    --sidebar-foreground:    210 20% 90%;
+    --sidebar-primary:       189 94% 43%;
+    --sidebar-primary-foreground: 210 33% 6%;
+    --sidebar-accent:        217 19% 14%;
+    --sidebar-accent-foreground: 210 20% 90%;
+    --sidebar-border:        217 19% 14%;
+    --sidebar-ring:          189 94% 43%;
+  }
+
+  .light {
+    --background:        0 0% 100%;
+    --foreground:        220 26% 9%;
+    --card:              0 0% 98%;
+    --card-foreground:   220 26% 9%;
+    --primary:           189 94% 33%;
+    --primary-foreground:0 0% 100%;
+    --secondary:         262 83% 55%;
+    --secondary-foreground: 0 0% 100%;
+    --muted:             210 20% 94%;
+    --muted-foreground:  215 14% 44%;
+    --border:            214 20% 88%;
+    --input:             214 20% 88%;
+    --ring:              189 94% 33%;
+  }
+}
