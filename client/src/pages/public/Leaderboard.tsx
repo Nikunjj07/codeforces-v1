@@ -1,7 +1,9 @@
 import { useQuery } from '@tanstack/react-query'
 import api from '../../services/api'
+import { useWebSocket } from '../../hooks/useWebSocket'
 
 export default function Leaderboard() {
+  useWebSocket() // Listen for global rankings updates
   const { data, isLoading } = useQuery({
     queryKey: ['global-leaderboard'],
     queryFn: () => api.get('/leaderboard/global').then((r) => r.data.data).catch(() => []),

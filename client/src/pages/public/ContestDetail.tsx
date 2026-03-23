@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom'
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
 import api from '../../services/api'
 import { useAuth } from '../../context/AuthContext'
+import { useWebSocket } from '../../hooks/useWebSocket'
 
 function Countdown({ target }: { target: string }) {
   const [diff, setDiff] = useState(0)
@@ -23,6 +24,9 @@ export default function ContestDetail() {
   const { user, isAuthenticated } = useAuth()
   const qc = useQueryClient()
   const [tab, setTab] = useState<'overview' | 'problems' | 'leaderboard' | 'submissions'>('overview')
+
+  // Connect to the websocket for real-time leaderboard updates
+  useWebSocket(id)
 
   const { data, isLoading } = useQuery({
     queryKey: ['contest', id],
