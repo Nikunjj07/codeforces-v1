@@ -5,7 +5,7 @@
 
 @layer base {
   :root {
-    --radius: 0.75rem;
+    --radius: 0.375rem;
 
     /* ── Base Colors (Dark Theme) ────────────────────────── */
     --background:        210 33% 6%;
