@@ -8,45 +8,45 @@
     --radius: 0.375rem;
 
     /* ── Base Colors (Dark Theme) ────────────────────────── */
-    --background:        210 33% 6%;
-    --foreground:        210 20% 98%;
+    --background: 350 35% 4%;
+    --foreground: 0 0% 100%;
 
-    --card:              220 26% 9%;
-    --card-foreground:   210 20% 98%;
+    --card: 350 30% 8%;
+    --card-foreground: 0 0% 100%;
 
-    --popover:           220 26% 9%;
-    --popover-foreground:210 20% 98%;
+    --popover: 350 35% 4%;
+    --popover-foreground: 0 0% 100%;
 
-    /* ── Primary — Electric Cyan ─────────────────────────── */
-    --primary:           189 94% 43%;
-    --primary-foreground:210 33% 6%;
+    /* ── Primary — Crimson Red ───────────────────────────── */
+    --primary: 0 88% 62%;
+    --primary-foreground: 350 35% 4%;
 
     /* ── Secondary — Violet ──────────────────────────────── */
-    --secondary:         262 83% 63%;
-    --secondary-foreground: 210 20% 98%;
+    --secondary: 349 100% 65%;
+    --secondary-foreground: 0 0% 100%;
 
     /* ── Muted ───────────────────────────────────────────── */
-    --muted:             217 19% 17%;
-    --muted-foreground:  215 14% 44%;
+    --muted: 350 26% 14%;
+    --muted-foreground: 352 22% 84%;
 
     /* ── Accent ──────────────────────────────────────────── */
-    --accent:            189 94% 43%;
-    --accent-foreground: 210 33% 6%;
+    --accent: 349 63% 50%;
+    --accent-foreground: 0 0% 100%;
 
     /* ── Destructive ─────────────────────────────────────── */
-    --destructive:       0 84% 60%;
-    --destructive-foreground: 210 20% 98%;
+    --destructive: 0 100% 60%;
+    --destructive-foreground: 0 0% 100%;
 
     /* ── Border & Input ──────────────────────────────────── */
-    --border:            217 19% 17%;
-    --input:             217 19% 17%;
-    --ring:              189 94% 43%;
+    --border: 350 33% 18%;
+    --input: 350 26% 14%;
+    --ring: 0 88% 62%;
 
     /* ── Semantic Status Colors ──────────────────────────── */
     --status-accepted:   158 64% 52%;
     --status-wrong:      0 84% 60%;
     --status-tle:        38 92% 50%;
-    --status-pending:    215 14% 44%;
+    --status-pending:    350 10% 48%;
     --status-ce:         271 81% 60%;
     --status-re:         25 95% 53%;
 
@@ -58,40 +58,40 @@
 
     /* ── Rank Colors (Leaderboard) ───────────────────────── */
     --rank-gold:         43 96% 56%;
-    --rank-silver:       215 14% 71%;
+    --rank-silver:       350 9% 72%;
     --rank-bronze:       25 75% 53%;
 
     /* ── Chart Colors ────────────────────────────────────── */
-    --chart-1:           189 94% 43%;
-    --chart-2:           262 83% 63%;
-    --chart-3:           158 64% 52%;
-    --chart-4:           38 92% 50%;
-    --chart-5:           0 84% 60%;
+    --chart-1: 0 88% 62%;
+    --chart-2: 349 100% 65%;
+    --chart-3: 349 100% 85%;
+    --chart-4: 8 92% 70%;
+    --chart-5: 348 100% 50%;
 
     /* ── Sidebar ─────────────────────────────────────────── */
-    --sidebar-background:    220 30% 7%;
-    --sidebar-foreground:    210 20% 90%;
-    --sidebar-primary:       189 94% 43%;
-    --sidebar-primary-foreground: 210 33% 6%;
-    --sidebar-accent:        217 19% 14%;
-    --sidebar-accent-foreground: 210 20% 90%;
-    --sidebar-border:        217 19% 14%;
-    --sidebar-ring:          189 94% 43%;
+    --sidebar-background: 350 45% 2%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 0 88% 62%;
+    --sidebar-primary-foreground: 350 35% 4%;
+    --sidebar-accent: 350 26% 14%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 350 40% 22%;
+    --sidebar-ring: 0 88% 62%;
   }
 
   .light {
-    --background:        0 0% 100%;
-    --foreground:        220 26% 9%;
-    --card:              0 0% 98%;
-    --card-foreground:   220 26% 9%;
-    --primary:           189 94% 33%;
-    --primary-foreground:0 0% 100%;
-    --secondary:         262 83% 55%;
+    --background: 350 35% 4%;
+    --foreground: 0 0% 100%;
+    --card: 350 30% 8%;
+    --card-foreground: 0 0% 100%;
+    --primary: 0 88% 62%;
+    --primary-foreground: 350 35% 4%;
+    --secondary: 349 100% 65%;
     --secondary-foreground: 0 0% 100%;
-    --muted:             210 20% 94%;
-    --muted-foreground:  215 14% 44%;
-    --border:            214 20% 88%;
-    --input:             214 20% 88%;
-    --ring:              189 94% 33%;
+    --muted: 350 26% 14%;
+    --muted-foreground: 352 22% 84%;
+    --border: 350 33% 18%;
+    --input: 350 26% 14%;
+    --ring: 0 88% 62%;
   }
 }

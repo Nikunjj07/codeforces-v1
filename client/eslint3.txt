@@ -1,6 +1,0 @@
-
-D:\web d\projects\codeforces\client\src\hooks\useWebSocket.ts
-  44:3  error  Parsing error: Declaration or statement expected
-
-✖ 1 problem (1 error, 0 warnings)
-
